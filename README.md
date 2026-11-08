@@ -2,7 +2,7 @@
 
 **XDi Capstone-Projekt · Oktober 2026 · Valeria Erdmann**
 
-👉 **[Notebook ansehen (nbviewer)](NBVIEWER-LINK-HIER-EINFÜGEN)** - empfohlen, da GitHub große Notebooks oft nicht anzeigt.
+👉 **[Notebook ansehen (nbviewer)](https://nbviewer.org/github/verdmann/airline-passenger-satisfaction/blob/main/Erdmann_Capstone_AirlinePassengerSatisfaction_2026.ipynb)** - empfohlen, da GitHub große Notebooks oft nicht anzeigt.
 
 ## Worum geht es?
 Welche Faktoren hängen mit der Zufriedenheit von Fluggästen zusammen und wo sollte eine Airline ansetzen? Explorative Analyse, Segmentierung und Priorisierung auf Basis des Kaggle-Datensatzes "Airline Passenger Satisfaction" (129.880 Zeilen, 24 Spalten).
