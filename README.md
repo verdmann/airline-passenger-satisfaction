@@ -40,8 +40,26 @@ Im Verlauf habe ich drei auffällige Datensegmente entdeckt und ausgeschlossen (
 - Ergebnisse gelten nur für wiederkehrende erwachsene Geschäftsreisende
 - Korrelationen, keine Kausalität
 
+## Interaktives Dashboard (Power BI)
+Ergänzend zur Analyse in Python habe ich die finale Analysebasis (62.363 wiederkehrende erwachsene Geschäftsreisende) als interaktives Dashboard in Power BI aufbereitet. Datengrundlage ist der bereinigte Datensatz aus dem Notebook. Filter nach Reiseklasse, Altersgruppe, Alter und Geschlecht aktualisieren alle Visuals gleichzeitig.
+
+![Power BI-Dashboard, Gesamtansicht](images/Dashboard_Gesamt.png)
+*Gesamtansicht: 62.363 Fluggäste, 70 % zufrieden.*
+
+![Power BI-Dashboard, gefiltert auf Economy/Economy Plus](images/Dashboard_Filter_Economy.png)
+*Gefiltert auf Economy/Economy Plus: Die Zufriedenheit sinkt auf 47 %, die Kartenfarben passen sich automatisch an.*
+
+**Umsetzung**
+- **Power Query:** Entpivotieren der 14 Bewertungskategorien in eine eigene Bewertungstabelle, Sortierspalten für Kategorien
+- **Datenmodell:** 1:n-Beziehung zwischen Fluggast- und Bewertungstabelle (über `id`), damit Filter auch die Bewertungen einschränken
+- **DAX:** Measures für Zufriedenheitsquote, Anzahl Fluggäste und Ø-Bewertung
+- **Bedingte Formatierung:** Kartenfarben abhängig von Zufriedenheitsquote und Segmentgröße
+- **Datenschnitte** für Reiseklasse, Altersgruppe, Alter und Geschlecht
+
+Power BI-Datei: [`Capstone_PowerBI_Dashboard_final.pbix`](Capstone_PowerBI_Dashboard_final.pbix) (zum Öffnen wird Power BI Desktop benötigt)
+
 ## Tools
-Python, pandas, NumPy, matplotlib, seaborn, scikit-learn, Jupyter
+Python, pandas, NumPy, matplotlib, seaborn, scikit-learn, Jupyter, Power BI (Power Query, DAX)
 
 ## Daten
 [Airline Passenger Satisfaction auf Kaggle](https://www.kaggle.com/datasets/mysarahmadbhat/airline-passenger-satisfaction) (CC0: Public Domain). Zum Ausführen `airline_passenger_satisfaction.csv` und `data_dictionary.csv` in denselben Ordner wie das Notebook legen.
